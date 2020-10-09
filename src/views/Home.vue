@@ -48,7 +48,15 @@
 export default {
   data () {
     return {
-      name: ''
+      name: '',
+      delayTime: 500
+    }
+  },
+  watch: {
+    $route(from) {
+      if (from.name == "Registration") {
+        this.delayTime = 0
+      }
     }
   },
   mounted() {
@@ -56,5 +64,16 @@ export default {
       this.name = localStorage.name;
     }
   },
+  beforeMount() {
+    this.delay(this.delayTime);
+  },
+  methods: {
+    delay(ms) {
+      const startPoint = new Date().getTime();
+      while (new Date().getTime() - startPoint <= ms) {
+        /* wait */
+      }
+    }
+  }
 }
 </script>
