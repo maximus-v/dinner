@@ -1,18 +1,38 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <b-container>
+    <b-card title="Vorspeise">
+      <b-card-text>
+        Nibbles mit Kiwi-Dip
+      </b-card-text>
+      <b-card-text>
+        Fritata mit verschiedenem Gemüse
+      </b-card-text>
+      <b-card-text>
+        Garnelencocktails
+      </b-card-text>
+    </b-card>
+
+    <b-card title="Hauptgang">
+      <b-card-text>
+        Fish & Chips
+      </b-card-text>
+      <b-card-text>
+        verschiedene Dips (Mushy Peas, Guacamole, Limetten-Mayo)
+      </b-card-text>
+    </b-card>
+
+    <b-card title="Nachspeise">
+      <b-card-text>
+        Churros mit Schokoladensoße
+      </b-card-text>
+      <b-card-text>
+        verschiedenes Obst
+      </b-card-text>
+    </b-card>
+  </b-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
 }
 </script>
