@@ -1,5 +1,7 @@
 <template>
   <b-container>
+    <h1>Guten Abend {{ name }}</h1>
+
     <b-card title="Vorspeise">
       <b-card-text>
         Nibbles mit Kiwi-Dip
@@ -34,5 +36,15 @@
 
 <script>
 export default {
+  data () {
+    return {
+      name: ''
+    }
+  },
+  mounted() {
+    if (localStorage.name) {
+      this.name = localStorage.name;
+    }
+  },
 }
 </script>
